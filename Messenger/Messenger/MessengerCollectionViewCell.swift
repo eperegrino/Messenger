@@ -1,5 +1,5 @@
 //
-//  MessageCollectionViewCell.swift
+//  MessengerCollectionViewCell.swift
 //  Messenger
 //
 //  Created by Eduardo Peregrino on 12/10/21.
@@ -7,15 +7,22 @@
 
 import UIKit
 
-class MessageCollectionViewCell: UICollectionViewCell {
+class MessengerCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Views -
-    lazy var leftImageBackground: UIView = {
+    let leftImageBackground: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray5
-        view.layer.cornerRadius = view.frame.width/2
+        view.layer.cornerRadius = 20
         
         return view
+    }()
+    
+    let initialsLabel: UILabel = {
+        let label = UILabel()
+        label.font = label.font.withSize(20)
+        
+        return label
     }()
     
     let nameLabel: UILabel = {
@@ -50,15 +57,18 @@ class MessageCollectionViewCell: UICollectionViewCell {
     
     func prepare(name: String, message: String) {
         nameLabel.text = name
+        let initials = name.split(separator: " ")
+        initialsLabel.text = "\(initials.first?.first ?? Character(""))\(initials.last?.first ?? Character(""))".uppercased()
         messageLabel.text = message
         setupViews()
     }
 }
 
 // MARK: - ViewCode -
-extension MessageCollectionViewCell: ViewCode {
+extension MessengerCollectionViewCell: ViewCode {
     func setupSubviews() {
         addSubview(leftImageBackground)
+        addSubview(initialsLabel)
         addSubview(nameLabel)
         addSubview(messageLabel)
         addSubview(separatorView)
@@ -70,6 +80,11 @@ extension MessageCollectionViewCell: ViewCode {
             $0.centerY == centerY
             $0.width == 40
             $0.height == 40
+        }
+        
+        initialsLabel.layout {
+            $0.centerY == leftImageBackground.centerY
+            $0.centerX == leftImageBackground.centerX
         }
         
         nameLabel.layout {

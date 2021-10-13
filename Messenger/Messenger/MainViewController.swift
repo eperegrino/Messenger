@@ -10,7 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     // MARK: - Properties -
-    let viewModel = MessageViewModel()
+    let viewModel = MessengerViewModel()
 
     // MARK: - Views -
     lazy var collectionView: UICollectionView = {
@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(MessageCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(MessengerCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         
         return collectionView
     }()
@@ -29,7 +29,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        title = "Messenger"
         setupViews()
+        setupNavigationItems()
     }
 }
 
@@ -49,6 +51,15 @@ extension MainViewController: ViewCode {
     }
 }
 
+extension MainViewController {
+    func setupNavigationItems() {
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add,
+                                  target: self,
+                                  action: nil)
+        navigationItem.rightBarButtonItem = addButton
+    }
+}
+
 // MARK: - CollectionView Setup -
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -56,7 +67,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MessageCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MessengerCollectionViewCell
         let name = "name \(indexPath.item)"
         let message = "message \(indexPath.item)"
         cell.prepare(name: name, message: message)
