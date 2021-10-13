@@ -149,6 +149,7 @@
 		DF5293BD270FEB5200A8BEE9 /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				DF53545C2717404800B63A51 /* custom view */,
 				DF7491AF27166B120095D4F7 /* viewcode */,
 				DF321FF42714A325009B6E86 /* GoogleService-Info.plist */,
 				DF5293BE270FEB5200A8BEE9 /* AppDelegate.swift */,
@@ -179,6 +180,13 @@
 				DF5293E4270FEB5700A8BEE9 /* MessengerUITestsLaunchTests.swift */,
 			);
 			path = MessengerUITests;
+			sourceTree = "<group>";
+		};
+		DF53545C2717404800B63A51 /* custom view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "custom view";
 			sourceTree = "<group>";
 		};
 		DF7491AF27166B120095D4F7 /* viewcode */ = {
