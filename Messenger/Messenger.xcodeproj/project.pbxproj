@@ -20,6 +20,10 @@
 		DF5293D9270FEB5600A8BEE9 /* MessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5293D8270FEB5600A8BEE9 /* MessengerTests.swift */; };
 		DF5293E3270FEB5700A8BEE9 /* MessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5293E2270FEB5700A8BEE9 /* MessengerUITests.swift */; };
 		DF5293E5270FEB5700A8BEE9 /* MessengerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5293E4270FEB5700A8BEE9 /* MessengerUITestsLaunchTests.swift */; };
+		DF7491AE27166A900095D4F7 /* MessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7491AD27166A900095D4F7 /* MessageCollectionViewCell.swift */; };
+		DF7491B127166B620095D4F7 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7491B027166B620095D4F7 /* ViewCode.swift */; };
+		DF7491B327166B980095D4F7 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7491B227166B980095D4F7 /* LayoutProxy.swift */; };
+		DF7491B5271674460095D4F7 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7491B4271674460095D4F7 /* MessageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		DF5293DE270FEB5700A8BEE9 /* MessengerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessengerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5293E2270FEB5700A8BEE9 /* MessengerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerUITests.swift; sourceTree = "<group>"; };
 		DF5293E4270FEB5700A8BEE9 /* MessengerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DF7491AD27166A900095D4F7 /* MessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF7491B027166B620095D4F7 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
+		DF7491B227166B980095D4F7 /* LayoutProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutProxy.swift; sourceTree = "<group>"; };
+		DF7491B4271674460095D4F7 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		EE3FFC33576AFD98A1A19EF6 /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
 		FEDB38B72650B0A5DB1DE4F0 /* Pods_MessengerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessengerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -141,6 +149,7 @@
 		DF5293BD270FEB5200A8BEE9 /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				DF7491AF27166B120095D4F7 /* viewcode */,
 				DF321FF42714A325009B6E86 /* GoogleService-Info.plist */,
 				DF5293BE270FEB5200A8BEE9 /* AppDelegate.swift */,
 				DF5293C0270FEB5200A8BEE9 /* SceneDelegate.swift */,
@@ -149,6 +158,8 @@
 				DF5293CC270FEB5600A8BEE9 /* LaunchScreen.storyboard */,
 				DF5293CF270FEB5600A8BEE9 /* Info.plist */,
 				DF5293C7270FEB5200A8BEE9 /* Messenger.xcdatamodeld */,
+				DF7491AD27166A900095D4F7 /* MessageCollectionViewCell.swift */,
+				DF7491B4271674460095D4F7 /* MessageViewModel.swift */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
@@ -168,6 +179,15 @@
 				DF5293E4270FEB5700A8BEE9 /* MessengerUITestsLaunchTests.swift */,
 			);
 			path = MessengerUITests;
+			sourceTree = "<group>";
+		};
+		DF7491AF27166B120095D4F7 /* viewcode */ = {
+			isa = PBXGroup;
+			children = (
+				DF7491B027166B620095D4F7 /* ViewCode.swift */,
+				DF7491B227166B980095D4F7 /* LayoutProxy.swift */,
+			);
+			path = viewcode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,9 +430,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF5293C3270FEB5200A8BEE9 /* MainViewController.swift in Sources */,
+				DF7491B327166B980095D4F7 /* LayoutProxy.swift in Sources */,
+				DF7491B5271674460095D4F7 /* MessageViewModel.swift in Sources */,
+				DF7491AE27166A900095D4F7 /* MessageCollectionViewCell.swift in Sources */,
 				DF5293BF270FEB5200A8BEE9 /* AppDelegate.swift in Sources */,
 				DF5293C1270FEB5200A8BEE9 /* SceneDelegate.swift in Sources */,
 				DF5293C9270FEB5200A8BEE9 /* Messenger.xcdatamodeld in Sources */,
+				DF7491B127166B620095D4F7 /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
