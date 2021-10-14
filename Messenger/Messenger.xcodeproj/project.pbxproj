@@ -21,6 +21,7 @@
 		DF5293E3270FEB5700A8BEE9 /* MessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5293E2270FEB5700A8BEE9 /* MessengerUITests.swift */; };
 		DF5293E5270FEB5700A8BEE9 /* MessengerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5293E4270FEB5700A8BEE9 /* MessengerUITestsLaunchTests.swift */; };
 		DF53545E27179CF600B63A51 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53545D27179CF600B63A51 /* NavigationViewController.swift */; };
+		DF5354602717BA4800B63A51 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF53545F2717BA4800B63A51 /* DatabaseManager.swift */; };
 		DF7491AE27166A900095D4F7 /* MessengerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7491AD27166A900095D4F7 /* MessengerCollectionViewCell.swift */; };
 		DF7491B127166B620095D4F7 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7491B027166B620095D4F7 /* ViewCode.swift */; };
 		DF7491B327166B980095D4F7 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7491B227166B980095D4F7 /* LayoutProxy.swift */; };
@@ -67,6 +68,7 @@
 		DF5293E2270FEB5700A8BEE9 /* MessengerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerUITests.swift; sourceTree = "<group>"; };
 		DF5293E4270FEB5700A8BEE9 /* MessengerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DF53545D27179CF600B63A51 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		DF53545F2717BA4800B63A51 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		DF7491AD27166A900095D4F7 /* MessengerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF7491B027166B620095D4F7 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		DF7491B227166B980095D4F7 /* LayoutProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutProxy.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				DF7491AD27166A900095D4F7 /* MessengerCollectionViewCell.swift */,
 				DF7491B4271674460095D4F7 /* MessengerViewModel.swift */,
 				DF53545D27179CF600B63A51 /* NavigationViewController.swift */,
+				DF53545F2717BA4800B63A51 /* DatabaseManager.swift */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 			files = (
 				DF5293C3270FEB5200A8BEE9 /* MainViewController.swift in Sources */,
 				DF7491B327166B980095D4F7 /* LayoutProxy.swift in Sources */,
+				DF5354602717BA4800B63A51 /* DatabaseManager.swift in Sources */,
 				DF7491B5271674460095D4F7 /* MessengerViewModel.swift in Sources */,
 				DF53545E27179CF600B63A51 /* NavigationViewController.swift in Sources */,
 				DF7491AE27166A900095D4F7 /* MessengerCollectionViewCell.swift in Sources */,

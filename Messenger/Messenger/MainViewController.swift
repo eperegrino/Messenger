@@ -32,6 +32,7 @@ class MainViewController: UIViewController {
         title = "Messenger"
         setupViews()
         setupNavigationItems()
+        DatabaseManager.databaseManager.readData()
     }
 }
 
