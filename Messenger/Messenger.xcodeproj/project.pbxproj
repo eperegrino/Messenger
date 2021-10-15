@@ -10,6 +10,8 @@
 		16C8B7556F53120BEF6E84D3 /* Pods_Messenger_MessengerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54230E2EA10CC84885CFAB75 /* Pods_Messenger_MessengerUITests.framework */; };
 		5EF1F9BB1E1CFFFEA8580CF9 /* Pods_MessengerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEDB38B72650B0A5DB1DE4F0 /* Pods_MessengerTests.framework */; };
 		C202B5A0A33E6AB28D709384 /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F67A8B4E7D97FA653E242F1 /* Pods_Messenger.framework */; };
+		DF1E27262718F249005FB9C5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E27252718F249005FB9C5 /* User.swift */; };
+		DF1E27282719004C005FB9C5 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1E27272719004C005FB9C5 /* Message.swift */; };
 		DF321FF52714A325009B6E86 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF321FF42714A325009B6E86 /* GoogleService-Info.plist */; };
 		DF5293BF270FEB5200A8BEE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5293BE270FEB5200A8BEE9 /* AppDelegate.swift */; };
 		DF5293C1270FEB5200A8BEE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5293C0270FEB5200A8BEE9 /* SceneDelegate.swift */; };
@@ -53,6 +55,8 @@
 		5F67A8B4E7D97FA653E242F1 /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		889D1795C6BFC50C6B54CF13 /* Pods-Messenger-MessengerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger-MessengerUITests.release.xcconfig"; path = "Target Support Files/Pods-Messenger-MessengerUITests/Pods-Messenger-MessengerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D305CED038A777BABF559B14 /* Pods-MessengerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessengerTests.debug.xcconfig"; path = "Target Support Files/Pods-MessengerTests/Pods-MessengerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DF1E27252718F249005FB9C5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DF1E27272719004C005FB9C5 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		DF321FF42714A325009B6E86 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF5293BB270FEB5200A8BEE9 /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5293BE270FEB5200A8BEE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +132,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DF1E27242718F226005FB9C5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DF1E27252718F249005FB9C5 /* User.swift */,
+				DF1E27272719004C005FB9C5 /* Message.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		DF1E272927190121005FB9C5 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				DF7491B4271674460095D4F7 /* MessengerViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 		DF5293B2270FEB5100A8BEE9 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +174,8 @@
 		DF5293BD270FEB5200A8BEE9 /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				DF1E272927190121005FB9C5 /* viewmodel */,
+				DF1E27242718F226005FB9C5 /* model */,
 				DF53545C2717404800B63A51 /* custom view */,
 				DF7491AF27166B120095D4F7 /* viewcode */,
 				DF321FF42714A325009B6E86 /* GoogleService-Info.plist */,
@@ -164,7 +187,6 @@
 				DF5293CF270FEB5600A8BEE9 /* Info.plist */,
 				DF5293C7270FEB5200A8BEE9 /* Messenger.xcdatamodeld */,
 				DF7491AD27166A900095D4F7 /* MessengerCollectionViewCell.swift */,
-				DF7491B4271674460095D4F7 /* MessengerViewModel.swift */,
 				DF53545D27179CF600B63A51 /* NavigationViewController.swift */,
 				DF53545F2717BA4800B63A51 /* DatabaseManager.swift */,
 			);
@@ -452,6 +474,8 @@
 				DF5293BF270FEB5200A8BEE9 /* AppDelegate.swift in Sources */,
 				DF5293C1270FEB5200A8BEE9 /* SceneDelegate.swift in Sources */,
 				DF5293C9270FEB5200A8BEE9 /* Messenger.xcdatamodeld in Sources */,
+				DF1E27282719004C005FB9C5 /* Message.swift in Sources */,
+				DF1E27262718F249005FB9C5 /* User.swift in Sources */,
 				DF7491B127166B620095D4F7 /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

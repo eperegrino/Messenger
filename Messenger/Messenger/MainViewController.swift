@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
         title = "Messenger"
         setupViews()
         setupNavigationItems()
-        DatabaseManager.databaseManager.readData()
+        viewModel.initList()
     }
 }
 
@@ -64,13 +64,13 @@ extension MainViewController {
 // MARK: - CollectionView Setup -
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.messageList.count
+        return viewModel.messages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MessengerCollectionViewCell
-        let name = "name \(indexPath.item)"
-        let message = "message \(indexPath.item)"
+        let name = viewModel.messages[indexPath.item].senderName//"name \(indexPath.item)"
+        let message = viewModel.messages[indexPath.item].message//"message \(indexPath.item)"
         cell.prepare(name: name, message: message)
         return cell
     }

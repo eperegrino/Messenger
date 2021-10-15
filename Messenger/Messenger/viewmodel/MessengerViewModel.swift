@@ -18,4 +18,14 @@ class MessengerViewModel {
                        "Name 7": "Message 7",
                        "Name 8": "Message 8",
                        "Name 9": "Message 9"]
+    
+    var messages: [Message] = [Message(messageId: 0, message: "Mensagem default", senderId: 0, senderName: "Sender Teste", date: "", time: "")]
+    
+    func initList() {
+        DatabaseManager.databaseManager.fetchMessages(callback: addMessage)
+    }
+    
+    func addMessage(_ messageList: [Message]) {
+        messages.append(contentsOf: messageList)
+    }
 }
